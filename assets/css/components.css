@@ -1,0 +1,165 @@
+/* Design tokens as CSS custom properties */
+:root {
+  --color-surface: #F9F7F2;
+  --color-on-surface: #141312;
+  --color-surface-container: #EEEAE2;
+  --color-surface-container-low: #F5F2EC;
+  --color-surface-container-lowest: #ffffff;
+  --color-primary: #576070;
+  --color-secondary: #017A56;
+  --color-tertiary: #3E3ECC;
+  --color-on-surface-variant: #5E5F5D;
+  --color-outline-variant: #C2C0B8;
+  --nav-height: 5rem;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-surface: #0D0C11;
+    --color-on-surface: #EDE9E0;
+    --color-surface-container: #161418;
+    --color-surface-container-low: #1C1A24;
+    --color-surface-container-lowest: #0A0910;
+    --color-primary: #8090AA;
+    --color-secondary: #00C47C;
+    --color-tertiary: #7070E8;
+    --color-on-surface-variant: #9A9693;
+    --color-outline-variant: #2E2B38;
+  }
+}
+
+/* Nav background — overrides Tailwind since nav is JS-injected after CDN scan */
+#site-nav {
+  background-color: #EEEAE2;
+}
+
+@media (prefers-color-scheme: dark) {
+  #site-nav {
+    background-color: #161418;
+  }
+}
+
+/* Smooth scroll with sticky nav offset */
+html {
+  scroll-behavior: smooth;
+}
+
+section[id] {
+  scroll-margin-top: var(--nav-height);
+}
+
+/* Typography scale */
+.text-display-lg {
+  font-size: 4.5rem;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+}
+.text-display-md {
+  font-size: 3.5rem;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+}
+.text-title-lg {
+  font-size: 1.75rem;
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+}
+.text-title-sm {
+  font-size: 1.125rem;
+  line-height: 1.4;
+  font-weight: 500;
+}
+.text-body-md {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+.text-label-md {
+  font-size: 0.875rem;
+  line-height: 1.4;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+.text-label-sm {
+  font-size: 0.75rem;
+  line-height: 1.4;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+@media (max-width: 768px) {
+  .text-display-lg { font-size: 3rem; }
+  .text-display-md { font-size: 2.5rem; }
+}
+
+/* Font utilities */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Space Grotesk', sans-serif;
+}
+
+.font-label {
+  font-family: 'Space Grotesk', sans-serif;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+/* Material Symbols */
+.material-symbols-outlined {
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+
+/* Section dividers via tonal shift — no 1px borders */
+.section-alt {
+  background-color: var(--color-surface-container);
+}
+
+/* Project card top accent animation (reusable) */
+.card-accent {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: var(--color-secondary);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.5s ease;
+}
+
+.group:hover .card-accent {
+  transform: scaleX(1);
+}
+
+/* Scroll indicator bounce */
+@keyframes scrollBounce {
+  0%, 100% { transform: translateY(0); opacity: 0.4; }
+  50% { transform: translateY(6px); opacity: 0.8; }
+}
+
+/* Terminal cursor blink */
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+.terminal-cursor {
+  animation: blink 1s step-start infinite;
+}
+
+/* Tech chip — standardized */
+.tech-chip {
+  background-color: #E5E1D8;
+  color: #5E5F5D;
+  padding: 0.25rem 0.75rem;
+  border-radius: 0.75rem;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 0.75rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  display: inline-block;
+}
+
+@media (prefers-color-scheme: dark) {
+  .tech-chip {
+    background-color: #2E2B38;
+    color: #9A9693;
+  }
+}

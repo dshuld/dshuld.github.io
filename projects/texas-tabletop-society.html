@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Texas Tabletop Society | Dylan Shuldberg</title>
+  <meta name="description" content="Award-winning SaaS platform for board game cafés built at BYU, 1st Prize among 12 teams." />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="/assets/css/components.css" />
+
+  <!-- Tailwind CDN + shared config -->
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script src="/assets/js/tailwind.config.js"></script>
+</head>
+<body class="bg-surface text-on-surface font-body antialiased min-h-screen flex flex-col selection:bg-secondary selection:text-on-secondary dark:bg-[#0D0C11] dark:text-[#EDE9E0]">
+
+  <div id="nav-placeholder"></div>
+
+  <main class="flex-grow">
+
+    <!-- ═══════════════════════════════════════════════════════════════════════
+         PROJECT HERO
+         ═══════════════════════════════════════════════════════════════════════ -->
+    <section class="max-w-7xl mx-auto px-8 py-24 md:py-32">
+      <div class="mb-16">
+        <a href="/projects/" class="text-on-surface-variant dark:text-[#9A9693] hover:text-secondary dark:hover:text-[#00C47C] font-body text-sm flex items-center gap-2 mb-12 transition-colors">
+          <span class="material-symbols-outlined text-base">arrow_back</span>
+          Back to Projects
+        </a>
+
+        <span class="font-label text-sm text-secondary dark:text-[#00C47C] mb-4 block">SaaS &bull; BYU Capstone &bull; 1st Prize</span>
+
+        <h1 class="font-headline text-display-lg font-bold text-on-surface dark:text-[#EDE9E0] mb-8 max-w-4xl leading-tight">
+          Texas Tabletop Society
+        </h1>
+
+        <div class="flex flex-wrap gap-2 mb-10">
+          <span class="tech-chip">Svelte</span>
+          <span class="tech-chip">TypeScript</span>
+          <span class="tech-chip">Stripe</span>
+          <span class="tech-chip">Node.js</span>
+          <span class="tech-chip">SQL</span>
+        </div>
+
+        <div class="flex flex-wrap gap-4">
+          <a
+            href="https://texastabletopsociety.com"
+            target="_blank"
+            rel="noopener"
+            class="border border-outline-variant/30 dark:border-[#2E2B38] text-primary dark:text-[#8090AA] px-6 py-3 rounded-md font-body font-medium hover:bg-surface-container-low dark:hover:bg-[#1C1A24] transition-colors flex items-center gap-2"
+          >
+            <span class="material-symbols-outlined text-base">open_in_new</span>
+            View Site
+          </a>
+        </div>
+      </div>
+
+      <div class="w-full h-72 md:h-[480px] bg-surface-container-low dark:bg-[#1C1A24] rounded-xl overflow-hidden mb-24 relative">
+        <img
+          src="/assets/images/projects/texas-tabletop.png"
+          alt="Texas Tabletop Society"
+          class="w-full h-full object-cover object-top"
+          onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"
+        />
+        <div class="w-full h-full items-center justify-center" style="display:none">
+          <span class="material-symbols-outlined text-outline-variant dark:text-[#3E3A4A]" style="font-size:6rem;">table_bar</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════════════════
+         PROJECT DETAILS
+         ═══════════════════════════════════════════════════════════════════════ -->
+    <section class="bg-surface-container dark:bg-[#161418] py-32">
+      <div class="max-w-7xl mx-auto px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-16">
+
+          <!-- Main content -->
+          <div class="lg:col-span-8">
+
+            <div class="mb-16">
+              <h2 class="font-headline text-display-md font-bold text-on-surface dark:text-[#EDE9E0] mb-8">Overview</h2>
+              <div class="space-y-6 font-body text-body-md text-on-surface-variant dark:text-[#9A9693] leading-relaxed">
+                <p>
+                  Texas Tabletop Society is a SaaS platform built for board game cafés to manage their day-to-day operations: inventory tracking, table reservations, and event registration, all in one place. The project was developed as part of the BYU Software Engineering Capstone course over Jan–Apr 2026.
+                </p>
+                <p>
+                  Working in a team of six, I was responsible for developing and refactoring the Svelte frontend. This included the full customer-facing flow: account creation, reservation booking, event registration, and payment processing via Stripe. The goal was a clean, responsive interface that felt intuitive even for first-time users.
+                </p>
+                <p>
+                  At the end of the semester, the project was presented to a panel of judges alongside 11 other competing teams. Texas Tabletop Society was awarded 1st Prize by unanimous judge decision.
+                </p>
+              </div>
+            </div>
+
+            <div class="mb-16">
+              <h2 class="font-headline text-title-lg font-bold text-on-surface dark:text-[#EDE9E0] mb-8 border-b border-outline-variant/20 dark:border-[#2E2B38]/80 pb-4">Technical Highlights</h2>
+              <div class="space-y-6">
+                <div class="flex gap-4 items-start">
+                  <span class="material-symbols-outlined text-secondary dark:text-[#00C47C] mt-0.5 flex-shrink-0">check_circle</span>
+                  <div>
+                    <h3 class="font-headline text-on-surface dark:text-[#EDE9E0] font-semibold mb-1">Svelte Frontend with Full Customer Flow</h3>
+                    <p class="font-body text-body-md text-on-surface-variant dark:text-[#9A9693]">
+                      Developed the complete customer-facing UI in Svelte, covering account creation, table reservations, event registration, and checkout, all in a component-driven architecture with reactive state management.
+                    </p>
+                  </div>
+                </div>
+                <div class="flex gap-4 items-start">
+                  <span class="material-symbols-outlined text-secondary dark:text-[#00C47C] mt-0.5 flex-shrink-0">check_circle</span>
+                  <div>
+                    <h3 class="font-headline text-on-surface dark:text-[#EDE9E0] font-semibold mb-1">Stripe Payment Integration</h3>
+                    <p class="font-body text-body-md text-on-surface-variant dark:text-[#9A9693]">
+                      Integrated Stripe for real payment processing, including secure checkout flows and webhook handling for post-payment event confirmation and reservation updates.
+                    </p>
+                  </div>
+                </div>
+                <div class="flex gap-4 items-start">
+                  <span class="material-symbols-outlined text-secondary dark:text-[#00C47C] mt-0.5 flex-shrink-0">check_circle</span>
+                  <div>
+                    <h3 class="font-headline text-on-surface dark:text-[#EDE9E0] font-semibold mb-1">Agile Team Collaboration</h3>
+                    <p class="font-body text-body-md text-on-surface-variant dark:text-[#9A9693]">
+                      Coordinated with a team of six across frontend, backend, and QA responsibilities. Used Git branching, pull request reviews, and iterative sprints to deliver a production-quality application within a fixed semester timeline.
+                    </p>
+                  </div>
+                </div>
+                <div class="flex gap-4 items-start">
+                  <span class="material-symbols-outlined text-secondary dark:text-[#00C47C] mt-0.5 flex-shrink-0">check_circle</span>
+                  <div>
+                    <h3 class="font-headline text-on-surface dark:text-[#EDE9E0] font-semibold mb-1">1st Place, Capstone Competition</h3>
+                    <p class="font-body text-body-md text-on-surface-variant dark:text-[#9A9693]">
+                      Awarded 1st Prize by unanimous judge decision among 12 competing teams.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Sidebar -->
+          <aside class="lg:col-span-4">
+            <div class="bg-surface-container-low dark:bg-[#1C1A24] p-8 rounded-xl sticky top-24">
+              <h3 class="font-headline text-on-surface dark:text-[#EDE9E0] font-bold mb-6">Project Details</h3>
+              <dl class="space-y-5 font-body text-sm">
+                <div>
+                  <dt class="font-label text-label-sm text-on-surface-variant dark:text-[#9A9693] mb-1">Status</dt>
+                  <dd class="text-on-surface dark:text-[#EDE9E0]">Completed &bull; 1st Prize</dd>
+                </div>
+                <div>
+                  <dt class="font-label text-label-sm text-on-surface-variant dark:text-[#9A9693] mb-1">Timeline</dt>
+                  <dd class="text-on-surface dark:text-[#EDE9E0]">Jan – Apr 2026</dd>
+                </div>
+                <div>
+                  <dt class="font-label text-label-sm text-on-surface-variant dark:text-[#9A9693] mb-1">Role</dt>
+                  <dd class="text-on-surface dark:text-[#EDE9E0]">Frontend Developer</dd>
+                </div>
+                <div>
+                  <dt class="font-label text-label-sm text-on-surface-variant dark:text-[#9A9693] mb-1">Team Size</dt>
+                  <dd class="text-on-surface dark:text-[#EDE9E0]">Six engineers</dd>
+                </div>
+                <div>
+                  <dt class="font-label text-label-sm text-on-surface-variant dark:text-[#9A9693] mb-1">Stack</dt>
+                  <dd class="flex flex-wrap gap-1.5 mt-1">
+                    <span class="tech-chip">Svelte</span>
+                    <span class="tech-chip">TypeScript</span>
+                    <span class="tech-chip">Stripe</span>
+                    <span class="tech-chip">Node.js</span>
+                    <span class="tech-chip">SQL</span>
+                  </dd>
+                </div>
+              </dl>
+            </div>
+          </aside>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════════════════
+         NAVIGATION FOOTER
+         ═══════════════════════════════════════════════════════════════════════ -->
+    <section class="max-w-7xl mx-auto px-8 py-24">
+      <div class="flex justify-between items-center">
+        <a href="/projects/" class="text-on-surface-variant dark:text-[#9A9693] hover:text-secondary dark:hover:text-[#00C47C] font-body flex items-center gap-2 transition-colors">
+          <span class="material-symbols-outlined">arrow_back</span>
+          All Projects
+        </a>
+        <a href="/projects/io-web-game.html" class="text-on-surface-variant dark:text-[#9A9693] hover:text-secondary dark:hover:text-[#00C47C] font-body flex items-center gap-2 transition-colors">
+          .IO-Style Web Game
+          <span class="material-symbols-outlined">arrow_forward</span>
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+  <div id="footer-placeholder"></div>
+
+  <script src="/assets/js/components.js"></script>
+  <script src="/assets/js/main.js"></script>
+</body>
+</html>

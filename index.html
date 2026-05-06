@@ -1,10 +1,398 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Dylan Shuldberg</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dylan Shuldberg - Software Engineer</title>
+  <meta name="description" content="Dylan Shuldberg - Software Engineer building scalable systems and refined user experiences." />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="/assets/css/components.css" />
+
+  <!-- Tailwind CDN + shared config -->
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script src="/assets/js/tailwind.config.js"></script>
 </head>
-<body>
-  <h1>Hello, I'm Dylan Shuldberg</h1>
-  <p>Software Engineer, site coming soon!</p>
+<body class="bg-surface text-on-surface font-body antialiased min-h-screen flex flex-col selection:bg-secondary selection:text-on-secondary dark:bg-[#0D0C11] dark:text-[#EDE9E0]">
+
+  <div id="nav-placeholder"></div>
+
+  <main class="flex-grow">
+
+    <!-- ═══════════════════════════════════════════════════════════════════════
+         HERO
+         ═══════════════════════════════════════════════════════════════════════ -->
+    <section id="hero" class="relative max-w-7xl mx-auto px-8 py-24 grid grid-cols-1 md:grid-cols-12 gap-12 items-center" style="min-height: calc(100vh - var(--nav-height));">
+      <div class="md:col-span-7">
+        <span class="font-label text-sm text-secondary dark:text-[#00C47C] mb-4 block">
+          Software Engineer
+        </span>
+        <h1 class="font-headline text-display-lg font-bold text-on-surface dark:text-[#EDE9E0] leading-tight mb-8">
+          Hello, I'm <br />
+          Dylan Shuldberg.
+        </h1>
+        <p class="font-body text-lg text-on-surface-variant dark:text-[#9A9693] max-w-xl mb-12 leading-relaxed">
+          CS graduate from BYU with a Software Engineering degree. I build full-stack web apps, automate infrastructure, and manage systems throughout the deployment process.
+        </p>
+        <div class="flex flex-wrap gap-4">
+          <!-- Primary CTA: Resume, prominent per design requirements -->
+          <a
+            href="/assets/resume.pdf"
+            target="_blank"
+            rel="noopener"
+            class="bg-primary dark:bg-[#6A7A94] text-on-primary px-8 py-4 rounded-md font-body font-medium hover:bg-primary-dim dark:hover:bg-[#8090AA] transition-colors flex items-center gap-2"
+          >
+            View Resume
+            <span class="material-symbols-outlined text-base">open_in_new</span>
+          </a>
+          <!-- Secondary CTA: Projects -->
+          <a
+            href="#projects"
+            class="text-secondary dark:text-[#00C47C] font-body font-medium flex items-center gap-2 px-8 py-4 hover:underline transition-colors"
+          >
+            &gt; View Projects
+          </a>
+        </div>
+      </div>
+
+      <!-- Scroll indicator -->
+      <a
+        href="#projects"
+        aria-label="Scroll to projects"
+        class="absolute bottom-8 left-1/2 -translate-x-1/2 text-on-surface-variant/40 dark:text-[#9A9693]/40 hover:text-secondary dark:hover:text-[#00C47C] transition-colors duration-300"
+        style="animation: scrollBounce 2s ease-in-out infinite;"
+      >
+        <span class="material-symbols-outlined" style="font-size: 2rem;">expand_more</span>
+      </a>
+
+      <!-- Decorative code block (desktop only) -->
+      <div class="md:col-span-5 hidden md:block">
+        <div class="bg-[#1C1A24] p-6 rounded-lg font-mono text-sm overflow-hidden">
+          <div class="flex gap-2 mb-4">
+            <div class="w-3 h-3 rounded-full bg-error-container"></div>
+            <div class="w-3 h-3 rounded-full bg-secondary-container"></div>
+            <div class="w-3 h-3 rounded-full bg-primary-container"></div>
+          </div>
+          <p class="text-inverse-on-surface mb-1"><span class="text-secondary">~</span>$ grep -Ril "software engineer" .</p>
+          <p class="text-inverse-on-surface mb-4 pl-4">./dylan-shuldberg/index.html</p>
+          <p class="text-inverse-on-surface mb-1"><span class="text-secondary">~</span>$ ls dylan-shuldberg/</p>
+          <p class="text-inverse-on-surface mb-4 pl-4">experience/&nbsp;&nbsp;projects/&nbsp;&nbsp;resume.pdf</p>
+          <p class="text-inverse-on-surface mb-1"><span class="text-secondary">~</span>$ cat dylan-shuldberg/index.html</p>
+          <p class="text-inverse-on-surface mb-1 pl-4">&lt;!DOCTYPE html&gt;</p>
+          <p class="text-tertiary-fixed pl-4 mb-4">&lt;!-- You're already here. --&gt;</p>
+          <p class="text-inverse-on-surface"><span class="text-secondary">~</span>$ <span class="terminal-cursor">▌</span></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════════════════
+         FEATURED PROJECTS
+         ═══════════════════════════════════════════════════════════════════════ -->
+    <section id="projects" class="bg-surface-container dark:bg-[#161418] py-32">
+      <div class="max-w-7xl mx-auto px-8">
+        <div class="mb-16 md:mb-24 flex flex-col md:flex-row justify-between items-end gap-8">
+          <div>
+            <span class="font-label text-sm text-secondary dark:text-[#00C47C] mb-2 block">Portfolio</span>
+            <h2 class="font-headline text-display-md font-bold text-on-surface dark:text-[#EDE9E0] tracking-tight">Featured Projects</h2>
+          </div>
+          <a
+            href="/projects/"
+            class="text-primary dark:text-[#8090AA] hover:text-secondary dark:hover:text-[#00C47C] font-body font-medium flex items-center gap-2 transition-colors"
+          >
+            View all projects
+            <span class="material-symbols-outlined">arrow_forward</span>
+          </a>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+
+          <!-- Project 1 (Large, full width) -->
+          <article class="lg:col-span-12 group bg-surface-container-low dark:bg-[#1C1A24] rounded-xl overflow-hidden hover:bg-surface-container-lowest dark:hover:bg-[#221F2D] transition-colors duration-300 relative">
+            <div class="card-accent"></div>
+            <div class="flex flex-col md:flex-row h-full">
+              <div class="w-full md:w-[60%] h-64 md:h-[440px] bg-surface-variant relative overflow-hidden">
+                <img
+                  src="/assets/images/projects/texas-tabletop.png"
+                  alt="Texas Tabletop Society"
+                  class="w-full h-full object-cover"
+                  onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"
+                />
+                <div class="w-full h-full items-center justify-center bg-surface-container-high dark:bg-[#221F2D]" style="display:none">
+                  <span class="material-symbols-outlined text-outline-variant dark:text-[#3E3A4A]" style="font-size:4rem;">table_bar</span>
+                </div>
+              </div>
+              <div class="w-full md:w-[40%] p-8 md:p-12 flex flex-col justify-center">
+                <span class="font-label text-xs text-on-surface-variant dark:text-[#9A9693] mb-4">SaaS &bull; BYU Capstone &bull; 1st Prize</span>
+                <h3 class="font-headline text-3xl font-bold text-on-surface dark:text-[#EDE9E0] mb-4">
+                  Texas Tabletop Society
+                </h3>
+                <p class="font-body text-on-surface-variant dark:text-[#9A9693] mb-8 leading-relaxed">
+                  Full-stack SaaS platform for board game cafés, built with a team of 6 to manage inventory, table reservations, and events. Svelte frontend, Python backend in AWS Lambda, and Stripe payment integration. Awarded 1st Prize by unanimous judge decision among 12 competing teams.
+                </p>
+                <div class="flex flex-wrap gap-2 mb-8">
+                  <span class="tech-chip">Svelte</span>
+                  <span class="tech-chip">Stripe</span>
+                  <span class="tech-chip">TypeScript</span>
+                  <span class="tech-chip">Node.js</span>
+                  <span class="tech-chip">SQL</span>
+                </div>
+                <a href="/projects/texas-tabletop-society.html" class="text-secondary dark:text-[#00C47C] font-body font-medium flex items-center gap-2 mt-auto hover:underline">
+                  &gt; View Case Study
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 2 (Half width) -->
+          <article class="lg:col-span-6 group bg-surface-container-low dark:bg-[#1C1A24] rounded-xl overflow-hidden hover:bg-surface-container-lowest dark:hover:bg-[#221F2D] transition-colors duration-300 relative">
+            <div class="card-accent"></div>
+            <div class="h-64 bg-surface-variant relative overflow-hidden">
+              <img
+                src="/assets/images/projects/io-web-game.png"
+                alt=".IO-Style Web Game"
+                class="w-full h-full object-cover"
+                onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"
+              />
+              <div class="w-full h-full items-center justify-center bg-surface-container-high dark:bg-[#221F2D]" style="display:none">
+                <span class="material-symbols-outlined text-outline-variant dark:text-[#3E3A4A]" style="font-size:3rem;">sports_esports</span>
+              </div>
+              <img
+                src="/assets/images/projects/io-game-gif.gif"
+                alt=".IO-Style Web Game gameplay"
+                class="absolute inset-0 w-full h-full object-cover opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+              />
+            </div>
+            <div class="p-8">
+              <span class="font-label text-xs text-on-surface-variant dark:text-[#9A9693] mb-2 block">Game Dev &bull; Personal &bull; In Progress</span>
+              <h3 class="font-headline text-2xl font-bold text-on-surface dark:text-[#EDE9E0] mb-3">.IO-Style Web Game</h3>
+              <p class="font-body text-on-surface-variant dark:text-[#9A9693] mb-6 text-sm leading-relaxed">
+                Websocket-based multiplayer game with a Rust backend, deployed on Oracle OCI via automated Docker CI/CD. Uses Cloudflare CDN for asset caching, DDoS protection, and TLS.
+              </p>
+              <div class="flex flex-wrap gap-2 mb-4">
+                <span class="tech-chip">Rust</span>
+                <span class="tech-chip">WebSockets</span>
+                <span class="tech-chip">Docker</span>
+                <span class="tech-chip">Oracle OCI</span>
+                <span class="tech-chip">Cloudflare</span>
+              </div>
+              <a href="/projects/io-web-game.html" class="text-secondary dark:text-[#00C47C] font-body font-medium text-sm flex items-center gap-1 hover:underline">
+                &gt; View Project
+              </a>
+            </div>
+          </article>
+
+          <!-- Project 3 (Half width) -->
+          <article class="lg:col-span-6 group bg-surface-container-low dark:bg-[#1C1A24] rounded-xl overflow-hidden hover:bg-surface-container-lowest dark:hover:bg-[#221F2D] transition-colors duration-300 relative">
+            <div class="card-accent"></div>
+            <div class="h-64 relative overflow-hidden flex items-center justify-center p-8" style="background-color: #14142b;">
+              <img
+                src="/assets/images/projects/gravitas-merge.svg"
+                alt="Gravitas Merge"
+                class="max-h-full max-w-full object-contain relative z-10 group-hover:opacity-0 transition-opacity duration-300"
+                onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"
+              />
+              <div class="w-full h-full items-center justify-center absolute inset-0" style="display:none">
+                <span class="material-symbols-outlined text-outline-variant dark:text-[#3E3A4A]" style="font-size:3rem;">casino</span>
+              </div>
+              <img
+                src="/assets/images/projects/gravitas-merge.gif"
+                alt="Gravitas Merge gameplay"
+                class="absolute inset-0 w-full h-full object-contain opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+              />
+            </div>
+            <div class="p-8">
+              <span class="font-label text-xs text-on-surface-variant dark:text-[#9A9693] mb-2 block">Game Dev &bull; Personal &bull; Shipped</span>
+              <h3 class="font-headline text-2xl font-bold text-on-surface dark:text-[#EDE9E0] mb-3">Gravitas Merge</h3>
+              <p class="font-body text-on-surface-variant dark:text-[#9A9693] mb-6 text-sm leading-relaxed">
+                HTML5 browser merge game deployed on Cloudflare Pages with automatic CI/CD via Workers. Built with real user feedback loops and developed primarily using Claude Code tooling.
+              </p>
+              <div class="flex flex-wrap gap-2 mb-4">
+                <span class="tech-chip">HTML5</span>
+                <span class="tech-chip">Cloudflare Pages</span>
+                <span class="tech-chip">Cloudflare Workers</span>
+                <span class="tech-chip">Claude Code</span>
+              </div>
+              <a href="/projects/gravitas-merge.html" class="text-secondary dark:text-[#00C47C] font-body font-medium text-sm flex items-center gap-1 hover:underline">
+                &gt; View Project
+              </a>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════════════════
+         SKILLS
+         ═══════════════════════════════════════════════════════════════════════ -->
+    <section id="skills" class="max-w-7xl mx-auto px-8 py-32">
+      <div class="flex items-baseline justify-between mb-12 border-b-2 border-outline-variant/20 dark:border-[#2E2B38]/80 pb-4">
+        <h2 class="font-headline text-display-md text-on-surface dark:text-[#EDE9E0]">Core Skills</h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+
+        <!-- Skill Card 1 -->
+        <div class="bg-surface-container-low dark:bg-[#1C1A24] p-10 flex flex-col group hover:bg-surface-container-lowest dark:hover:bg-[#221F2D] transition-colors duration-300 relative overflow-hidden rounded-xl">
+          <div class="card-accent"></div>
+          <div class="mb-8">
+            <span class="material-symbols-outlined text-primary dark:text-[#8090AA] mb-4 block" style="font-size: 2rem;">code</span>
+            <h3 class="font-headline text-title-lg text-on-surface dark:text-[#EDE9E0]">Languages &amp; Frameworks</h3>
+            <p class="font-body text-body-md text-on-surface-variant dark:text-[#9A9693] mt-2">
+              Full-stack development across systems, web, and data: from low-level C/C++ to React frontends and Node.js APIs.
+            </p>
+          </div>
+          <div class="mt-auto flex flex-wrap gap-2">
+            <span class="tech-chip">Python</span>
+            <span class="tech-chip">TypeScript</span>
+            <span class="tech-chip">C/C++</span>
+            <span class="tech-chip">Java</span>
+            <span class="tech-chip">React</span>
+            <span class="tech-chip">Node.js</span>
+            <span class="tech-chip">SQL</span>
+          </div>
+        </div>
+
+        <!-- Skill Card 2 -->
+        <div class="bg-surface-container-low dark:bg-[#1C1A24] p-10 flex flex-col group hover:bg-surface-container-lowest dark:hover:bg-[#221F2D] transition-colors duration-300 relative overflow-hidden rounded-xl">
+          <div class="card-accent"></div>
+          <div class="mb-8">
+            <span class="material-symbols-outlined text-primary dark:text-[#8090AA] mb-4 block" style="font-size: 2rem;">cloud</span>
+            <h3 class="font-headline text-title-lg text-on-surface dark:text-[#EDE9E0]">Cloud &amp; DevOps</h3>
+            <p class="font-body text-body-md text-on-surface-variant dark:text-[#9A9693] mt-2">
+              Deploying and operating production workloads in the cloud: containerized, monitored, and continuously delivered.
+            </p>
+          </div>
+          <div class="mt-auto flex flex-wrap gap-2">
+            <span class="tech-chip">AWS</span>
+            <span class="tech-chip">Oracle OCI</span>
+            <span class="tech-chip">Cloudflare</span>
+            <span class="tech-chip">Docker</span>
+            <span class="tech-chip">GitHub Actions</span>
+            <span class="tech-chip">Grafana</span>
+          </div>
+        </div>
+
+        <!-- Skill Card 3 -->
+        <div class="bg-surface-container-low dark:bg-[#1C1A24] p-10 flex flex-col group hover:bg-surface-container-lowest dark:hover:bg-[#221F2D] transition-colors duration-300 relative overflow-hidden rounded-xl">
+          <div class="card-accent"></div>
+          <div class="mb-8">
+            <span class="material-symbols-outlined text-primary dark:text-[#8090AA] mb-4 block" style="font-size: 2rem;">terminal</span>
+            <h3 class="font-headline text-title-lg text-on-surface dark:text-[#EDE9E0]">Systems Administration</h3>
+            <p class="font-body text-body-md text-on-surface-variant dark:text-[#9A9693] mt-2">
+              Running production servers, managing deployment pipelines and Active Directory, and maintaining uptime across 20+ servers and 15+ websites.
+            </p>
+          </div>
+          <div class="mt-auto flex flex-wrap gap-2">
+            <span class="tech-chip">Linux</span>
+            <span class="tech-chip">Windows Server</span>
+            <span class="tech-chip">Active Directory</span>
+            <span class="tech-chip">Git</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════════════════
+         EXPERIENCE
+         ═══════════════════════════════════════════════════════════════════════ -->
+    <section id="experience" class="bg-surface-container dark:bg-[#161418] py-32">
+      <div class="max-w-7xl mx-auto px-8">
+        <div class="flex items-baseline justify-between mb-16 border-b-2 border-outline-variant/20 dark:border-[#2E2B38]/80 pb-4">
+          <h2 class="font-headline text-display-md text-on-surface dark:text-[#EDE9E0]">Experience</h2>
+        </div>
+
+        <div class="space-y-16">
+
+          <!-- Experience Item 1 -->
+          <div class="md:grid md:grid-cols-[200px_1fr] md:gap-16 items-start">
+            <div class="mb-4 md:mb-0 md:text-right pt-2">
+              <span class="font-label text-label-md text-secondary dark:text-[#00C47C] block">May 2025 — May 2026</span>
+              <span class="font-body text-body-md text-on-surface-variant dark:text-[#9A9693] block mt-1">Provo, UT</span>
+            </div>
+            <div class="bg-surface-container-low dark:bg-[#1C1A24] p-10 lg:p-12 group hover:bg-surface-container-lowest dark:hover:bg-[#221F2D] transition-all duration-300 rounded-xl">
+              <h3 class="font-headline text-title-lg text-on-surface dark:text-[#EDE9E0] mb-1">System Administrator</h3>
+              <h4 class="font-body text-title-sm text-primary dark:text-[#8090AA] mb-6">BYU Department of Student Life</h4>
+              <div class="space-y-4 font-body text-body-md text-on-surface-variant dark:text-[#9A9693]">
+                <p>Managing 20+ servers and 15+ internal campus websites, overseeing deployment pipelines, Active Directory and Group Policies, database access, and server creation, updates, and uptime.</p>
+                <p>Recovered mission-critical systems via rapid response and emergency rollbacks, and continued training for the computer technician team.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Experience Item 2 -->
+          <div class="md:grid md:grid-cols-[200px_1fr] md:gap-16 items-start">
+            <div class="mb-4 md:mb-0 md:text-right pt-2">
+              <span class="font-label text-label-md text-on-surface-variant dark:text-[#9A9693] block">Feb 2022 — Apr 2025</span>
+              <span class="font-body text-body-md text-on-surface-variant dark:text-[#9A9693] block mt-1">Provo, UT</span>
+            </div>
+            <div class="bg-surface-container-low dark:bg-[#1C1A24] p-10 lg:p-12 group hover:bg-surface-container-lowest dark:hover:bg-[#221F2D] transition-all duration-300 rounded-xl">
+              <h3 class="font-headline text-title-lg text-on-surface dark:text-[#EDE9E0] mb-1">Computer Technician</h3>
+              <h4 class="font-body text-title-sm text-primary dark:text-[#8090AA] mb-6">BYU Department of Student Life</h4>
+              <div class="space-y-4 font-body text-body-md text-on-surface-variant dark:text-[#9A9693]">
+                <p>Worked in a team of 3 to manage 600+ staff computer systems across on-campus departments, troubleshooting hardware and software issues in-person and remotely under time constraints. Assisted in onboarding 5 new technicians.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- TODO: Add more experience items by duplicating the block above -->
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════════════════
+         CONTACT
+         ═══════════════════════════════════════════════════════════════════════ -->
+    <section id="contact" class="py-32">
+      <div class="max-w-7xl mx-auto px-8 text-center">
+        <span class="font-label text-sm text-secondary dark:text-[#00C47C] mb-4 block">Contact</span>
+        <h2 class="font-headline text-display-md font-bold text-on-surface dark:text-[#EDE9E0] mb-6">Let's Build Something.</h2>
+        <p class="font-body text-lg text-on-surface-variant dark:text-[#9A9693] max-w-xl mx-auto mb-12 leading-relaxed">
+          <!-- TODO: Update contact message and email -->
+          Open to engineering roles, consulting, and interesting collaborations. Reach out and let's talk.
+        </p>
+        <div class="flex flex-wrap justify-center gap-6">
+          <!-- TODO: Replace # with your real URLs -->
+          <a
+            href="mailto:dmshuldberg@gmail.com"
+            class="bg-primary dark:bg-[#6A7A94] text-on-primary px-8 py-4 rounded-md font-body font-medium hover:bg-primary-dim dark:hover:bg-[#8090AA] transition-colors"
+          >
+            Send an Email
+          </a>
+          <a
+            href="https://github.com/dshuld"
+            target="_blank"
+            rel="noopener"
+            class="border border-outline-variant/30 dark:border-[#2E2B38] text-primary dark:text-[#8090AA] px-8 py-4 rounded-md font-body font-medium hover:bg-surface-container-low dark:hover:bg-[#1C1A24] transition-colors"
+          >
+            GitHub
+          </a>
+          <a
+            href="https://linkedin.com/in/dylan-shuldberg"
+            target="_blank"
+            rel="noopener"
+            class="border border-outline-variant/30 dark:border-[#2E2B38] text-primary dark:text-[#8090AA] px-8 py-4 rounded-md font-body font-medium hover:bg-surface-container-low dark:hover:bg-[#1C1A24] transition-colors"
+          >
+            LinkedIn
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <div id="footer-placeholder"></div>
+
+  <!-- Component injection + interactivity -->
+  <script src="/assets/js/components.js"></script>
+  <script src="/assets/js/main.js"></script>
 </body>
 </html>
