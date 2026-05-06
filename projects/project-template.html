@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!--
+    TODO: Update title and description for each project.
+    Copy this file and rename it to your project slug, e.g. projects/nexus-analytics.html
+  -->
+  <title>Project Name | Dylan Shuldberg</title>
+  <meta name="description" content="TODO: Project one-liner for SEO." />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="/assets/css/components.css" />
+
+  <!-- Tailwind CDN + shared config -->
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script src="/assets/js/tailwind.config.js"></script>
+</head>
+<body class="bg-surface text-on-surface font-body antialiased min-h-screen flex flex-col selection:bg-secondary selection:text-on-secondary dark:bg-[#0D0C11] dark:text-[#EDE9E0]">
+
+  <div id="nav-placeholder"></div>
+
+  <main class="flex-grow">
+
+    <!-- ═══════════════════════════════════════════════════════════════════════
+         PROJECT HERO
+         ═══════════════════════════════════════════════════════════════════════ -->
+    <section class="max-w-7xl mx-auto px-8 py-24 md:py-32">
+      <div class="mb-16">
+        <!-- Back link -->
+        <a href="/projects/" class="text-on-surface-variant dark:text-[#9A9693] hover:text-secondary dark:hover:text-[#00C47C] font-body text-sm flex items-center gap-2 mb-12 transition-colors">
+          <span class="material-symbols-outlined text-base">arrow_back</span>
+          Back to Projects
+        </a>
+
+        <!-- Category label -->
+        <span class="font-label text-sm text-secondary dark:text-[#00C47C] mb-4 block">
+          <!-- TODO: Project category, e.g. "Enterprise System" or "Open Source" -->
+          Category
+        </span>
+
+        <!-- Project title -->
+        <h1 class="font-headline text-display-lg font-bold text-on-surface dark:text-[#EDE9E0] mb-8 max-w-4xl leading-tight">
+          <!-- TODO: Project name -->
+          Project Name
+        </h1>
+
+        <!-- Tech stack -->
+        <div class="flex flex-wrap gap-2 mb-10">
+          <!-- TODO: Add all relevant tech chips -->
+          <span class="tech-chip">Tech A</span>
+          <span class="tech-chip">Tech B</span>
+          <span class="tech-chip">Tech C</span>
+        </div>
+
+        <!-- Action links -->
+        <div class="flex flex-wrap gap-4">
+          <!-- TODO: Replace # with real URLs. Remove links that don't apply. -->
+          <a
+            href="#"
+            target="_blank"
+            rel="noopener"
+            class="bg-primary dark:bg-[#6A7A94] text-on-primary px-6 py-3 rounded-md font-body font-medium hover:bg-primary-dim dark:hover:bg-[#8090AA] transition-colors"
+          >
+            Live Demo
+          </a>
+          <a
+            href="#"
+            target="_blank"
+            rel="noopener"
+            class="border border-outline-variant/30 dark:border-[#2E2B38] text-primary dark:text-[#8090AA] px-6 py-3 rounded-md font-body font-medium hover:bg-surface-container-low dark:hover:bg-[#1C1A24] transition-colors flex items-center gap-2"
+          >
+            <span class="material-symbols-outlined text-base">code</span>
+            View Code
+          </a>
+        </div>
+      </div>
+
+      <!-- Project image / hero visual -->
+      <div class="w-full h-72 md:h-[480px] bg-surface-container-low dark:bg-[#1C1A24] rounded-xl overflow-hidden mb-24 relative">
+        <!--
+          TODO: Replace with a real image:
+          <img src="/assets/images/projects/your-project.jpg" alt="Project screenshot" class="w-full h-full object-cover" />
+        -->
+        <div class="w-full h-full flex items-center justify-center">
+          <span class="material-symbols-outlined text-outline-variant dark:text-[#3E3A4A]" style="font-size:6rem;">image</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════════════════
+         PROJECT DETAILS
+         ═══════════════════════════════════════════════════════════════════════ -->
+    <section class="bg-surface-container dark:bg-[#161418] py-32">
+      <div class="max-w-7xl mx-auto px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-16">
+
+          <!-- Main content (8 cols) -->
+          <div class="lg:col-span-8">
+
+            <!-- Overview -->
+            <div class="mb-16">
+              <h2 class="font-headline text-display-md font-bold text-on-surface dark:text-[#EDE9E0] mb-8">Overview</h2>
+              <div class="space-y-6 font-body text-body-md text-on-surface-variant dark:text-[#9A9693] leading-relaxed">
+                <!--
+                  TODO: Write a full description. Aim for 3–5 paragraphs covering:
+                  - What problem this solves and for whom
+                  - How you approached the solution
+                  - Key decisions and trade-offs made
+                  - Results and impact
+                -->
+                <p>
+                  Describe the problem this project solves and the context around why it needed to be built. Who uses it? What was broken or missing before?
+                </p>
+                <p>
+                  Explain the core architectural approach. How did you structure the system? What patterns did you reach for and why? What did you deliberately avoid?
+                </p>
+                <p>
+                  Describe the outcome: performance improvements, user adoption, revenue impact, or technical debt reduced. Be specific where you can.
+                </p>
+              </div>
+            </div>
+
+            <!-- Technical Highlights -->
+            <div class="mb-16">
+              <h2 class="font-headline text-title-lg font-bold text-on-surface dark:text-[#EDE9E0] mb-8 border-b border-outline-variant/20 dark:border-[#2E2B38]/80 pb-4">Technical Highlights</h2>
+              <div class="space-y-6">
+                <!--
+                  TODO: Add 3–5 specific technical achievements. Each item follows the pattern:
+                  - Icon + heading + short explanation
+                -->
+                <div class="flex gap-4 items-start">
+                  <span class="material-symbols-outlined text-secondary dark:text-[#00C47C] mt-0.5 flex-shrink-0">check_circle</span>
+                  <div>
+                    <h3 class="font-headline text-on-surface dark:text-[#EDE9E0] font-semibold mb-1">Highlight 1</h3>
+                    <p class="font-body text-body-md text-on-surface-variant dark:text-[#9A9693]">
+                      Specific technical achievement: a concrete, measurable outcome or an interesting architectural decision.
+                    </p>
+                  </div>
+                </div>
+                <div class="flex gap-4 items-start">
+                  <span class="material-symbols-outlined text-secondary dark:text-[#00C47C] mt-0.5 flex-shrink-0">check_circle</span>
+                  <div>
+                    <h3 class="font-headline text-on-surface dark:text-[#EDE9E0] font-semibold mb-1">Highlight 2</h3>
+                    <p class="font-body text-body-md text-on-surface-variant dark:text-[#9A9693]">
+                      Another specific technical achievement or design decision worth calling out.
+                    </p>
+                  </div>
+                </div>
+                <div class="flex gap-4 items-start">
+                  <span class="material-symbols-outlined text-secondary dark:text-[#00C47C] mt-0.5 flex-shrink-0">check_circle</span>
+                  <div>
+                    <h3 class="font-headline text-on-surface dark:text-[#EDE9E0] font-semibold mb-1">Highlight 3</h3>
+                    <p class="font-body text-body-md text-on-surface-variant dark:text-[#9A9693]">
+                      Another specific technical achievement or design decision worth calling out.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Optional: Code snippet or architecture diagram -->
+            <!--
+            <div class="mb-16">
+              <h2 class="font-headline text-title-lg font-bold text-on-surface dark:text-[#EDE9E0] mb-8 border-b border-outline-variant/20 dark:border-[#2E2B38]/80 pb-4">Architecture</h2>
+              <div class="bg-inverse-surface p-6 rounded-lg font-mono text-sm text-inverse-on-surface overflow-x-auto">
+                <pre>// TODO: Paste a representative code snippet or ASCII architecture diagram</pre>
+              </div>
+            </div>
+            -->
+
+          </div>
+
+          <!-- Sidebar (4 cols) -->
+          <aside class="lg:col-span-4">
+            <div class="bg-surface-container-low dark:bg-[#1C1A24] p-8 rounded-xl sticky top-24">
+              <h3 class="font-headline text-on-surface dark:text-[#EDE9E0] font-bold mb-6">Project Details</h3>
+              <dl class="space-y-5 font-body text-sm">
+
+                <div>
+                  <dt class="font-label text-label-sm text-on-surface-variant dark:text-[#9A9693] mb-1">Status</dt>
+                  <!-- TODO: e.g., "Production", "Archived", "Open Source" -->
+                  <dd class="text-on-surface dark:text-[#EDE9E0]">Production</dd>
+                </div>
+
+                <div>
+                  <dt class="font-label text-label-sm text-on-surface-variant dark:text-[#9A9693] mb-1">Year</dt>
+                  <!-- TODO: Year or date range -->
+                  <dd class="text-on-surface dark:text-[#EDE9E0]">202X</dd>
+                </div>
+
+                <div>
+                  <dt class="font-label text-label-sm text-on-surface-variant dark:text-[#9A9693] mb-1">Role</dt>
+                  <!-- TODO: e.g., "Lead Engineer", "Solo Project", "Co-founder" -->
+                  <dd class="text-on-surface dark:text-[#EDE9E0]">Lead Engineer</dd>
+                </div>
+
+                <div>
+                  <dt class="font-label text-label-sm text-on-surface-variant dark:text-[#9A9693] mb-1">Stack</dt>
+                  <dd class="flex flex-wrap gap-1.5 mt-1">
+                    <!-- TODO: Match chips from the hero above -->
+                    <span class="tech-chip">Tech A</span>
+                    <span class="tech-chip">Tech B</span>
+                    <span class="tech-chip">Tech C</span>
+                  </dd>
+                </div>
+
+              </dl>
+            </div>
+          </aside>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════════════════
+         NAVIGATION FOOTER (next/prev project or back)
+         ═══════════════════════════════════════════════════════════════════════ -->
+    <section class="max-w-7xl mx-auto px-8 py-24">
+      <div class="flex justify-between items-center">
+        <a
+          href="/projects/"
+          class="text-on-surface-variant dark:text-[#9A9693] hover:text-secondary dark:hover:text-[#00C47C] font-body flex items-center gap-2 transition-colors"
+        >
+          <span class="material-symbols-outlined">arrow_back</span>
+          All Projects
+        </a>
+        <!-- TODO: Optionally link to the next project -->
+        <!-- <a href="/projects/next-project.html" class="text-on-surface-variant dark:text-[#9A9693] hover:text-secondary dark:hover:text-[#00C47C] font-body flex items-center gap-2 transition-colors">
+          Next Project
+          <span class="material-symbols-outlined">arrow_forward</span>
+        </a> -->
+      </div>
+    </section>
+
+  </main>
+
+  <div id="footer-placeholder"></div>
+
+  <script src="/assets/js/components.js"></script>
+  <script src="/assets/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Magic Wand Image Classifier | Dylan Shuldberg</title>
+  <meta name="description" content="Deep neural network for real-time image classification, replacing a KNN baseline with lower latency and higher accuracy." />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="/assets/css/components.css" />
+
+  <!-- Tailwind CDN + shared config -->
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script src="/assets/js/tailwind.config.js"></script>
+</head>
+<body class="bg-surface text-on-surface font-body antialiased min-h-screen flex flex-col selection:bg-secondary selection:text-on-secondary dark:bg-[#0D0C11] dark:text-[#EDE9E0]">
+
+  <div id="nav-placeholder"></div>
+
+  <main class="flex-grow">
+
+    <!-- ═══════════════════════════════════════════════════════════════════════
+         PROJECT HERO
+         ═══════════════════════════════════════════════════════════════════════ -->
+    <section class="max-w-7xl mx-auto px-8 py-24 md:py-32">
+      <div class="mb-16">
+        <a href="/projects/" class="text-on-surface-variant dark:text-[#9A9693] hover:text-secondary dark:hover:text-[#00C47C] font-body text-sm flex items-center gap-2 mb-12 transition-colors">
+          <span class="material-symbols-outlined text-base">arrow_back</span>
+          Back to Projects
+        </a>
+
+        <span class="font-label text-sm text-secondary dark:text-[#00C47C] mb-4 block">Machine Learning &bull; Class Project</span>
+
+        <h1 class="font-headline text-display-lg font-bold text-on-surface dark:text-[#EDE9E0] mb-8 max-w-4xl leading-tight">
+          Magic Wand Image Classifier
+        </h1>
+
+        <div class="flex flex-wrap gap-2 mb-10">
+          <span class="tech-chip">Python</span>
+          <span class="tech-chip">Deep Learning</span>
+          <span class="tech-chip">Neural Networks</span>
+          <span class="tech-chip">Image Classification</span>
+        </div>
+      </div>
+
+      <div class="w-full h-72 md:h-[480px] bg-surface-container-low dark:bg-[#1C1A24] rounded-xl overflow-hidden mb-24 relative">
+        <div class="w-full h-full flex items-center justify-center">
+          <span class="material-symbols-outlined text-outline-variant dark:text-[#3E3A4A]" style="font-size:6rem;">auto_fix_high</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════════════════
+         PROJECT DETAILS
+         ═══════════════════════════════════════════════════════════════════════ -->
+    <section class="bg-surface-container dark:bg-[#161418] py-32">
+      <div class="max-w-7xl mx-auto px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-16">
+
+          <!-- Main content -->
+          <div class="lg:col-span-8">
+
+            <div class="mb-16">
+              <h2 class="font-headline text-display-md font-bold text-on-surface dark:text-[#EDE9E0] mb-8">Overview</h2>
+              <div class="space-y-6 font-body text-body-md text-on-surface-variant dark:text-[#9A9693] leading-relaxed">
+                <p>
+                  This project was built for a Deep Learning course at BYU (Sept–Dec 2025). The goal was to design and train a deep neural network capable of real-time image classification on a custom dataset with structural similarities to MNIST: hand-drawn gesture images used as "magic wand" inputs.
+                </p>
+                <p>
+                  This new system was to replace a live classification system being used on data captured from tracing an infrared LED on a real wand. The existing system used K-Nearest Neighbors (KNN) as its classifier, and while KNN is interpretable and easy to implement, its inference time scales linearly with dataset size, so the existing system was limited in dataset size in order to maintain acceptable speed, and thus sacrificed accuracy. The task was to replace it with a neural network that could classify faster without sacrificing accuracy.
+                </p>
+                <p>
+                  The resulting model outperformed KNN on both metrics: lower latency at inference time and higher classification accuracy on the held-out test set. The project covered the full ML pipeline: data preprocessing, architecture design, training, and evaluation.
+                </p>
+              </div>
+            </div>
+
+            <div class="mb-16">
+              <h2 class="font-headline text-title-lg font-bold text-on-surface dark:text-[#EDE9E0] mb-8 border-b border-outline-variant/20 dark:border-[#2E2B38]/80 pb-4">Technical Highlights</h2>
+              <div class="space-y-6">
+                <div class="flex gap-4 items-start">
+                  <span class="material-symbols-outlined text-secondary dark:text-[#00C47C] mt-0.5 flex-shrink-0">check_circle</span>
+                  <div>
+                    <h3 class="font-headline text-on-surface dark:text-[#EDE9E0] font-semibold mb-1">Deep Neural Network Architecture Design</h3>
+                    <p class="font-body text-body-md text-on-surface-variant dark:text-[#9A9693]">
+                      Designed and trained a convolutional neural network architecture for image classification, iterating on layer depth, activation functions, and regularization to optimize for both speed and accuracy on the target dataset.
+                    </p>
+                  </div>
+                </div>
+                <div class="flex gap-4 items-start">
+                  <span class="material-symbols-outlined text-secondary dark:text-[#00C47C] mt-0.5 flex-shrink-0">check_circle</span>
+                  <div>
+                    <h3 class="font-headline text-on-surface dark:text-[#EDE9E0] font-semibold mb-1">KNN Baseline Replacement</h3>
+                    <p class="font-body text-body-md text-on-surface-variant dark:text-[#9A9693]">
+                      Replaced an existing K-Nearest Neighbors classifier with the neural network, achieving lower inference latency (constant-time vs. O(n) per query) while simultaneously improving classification accuracy.
+                    </p>
+                  </div>
+                </div>
+                <div class="flex gap-4 items-start">
+                  <span class="material-symbols-outlined text-secondary dark:text-[#00C47C] mt-0.5 flex-shrink-0">check_circle</span>
+                  <div>
+                    <h3 class="font-headline text-on-surface dark:text-[#EDE9E0] font-semibold mb-1">Real-Time Classification Pipeline</h3>
+                    <p class="font-body text-body-md text-on-surface-variant dark:text-[#9A9693]">
+                      The model was optimized for real-time inference, fast enough to classify gesture inputs with minimal perceptible delay, enabling interactive "magic wand" applications.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Sidebar -->
+          <aside class="lg:col-span-4">
+            <div class="bg-surface-container-low dark:bg-[#1C1A24] p-8 rounded-xl sticky top-24">
+              <h3 class="font-headline text-on-surface dark:text-[#EDE9E0] font-bold mb-6">Project Details</h3>
+              <dl class="space-y-5 font-body text-sm">
+                <div>
+                  <dt class="font-label text-label-sm text-on-surface-variant dark:text-[#9A9693] mb-1">Status</dt>
+                  <dd class="text-on-surface dark:text-[#EDE9E0]">Completed</dd>
+                </div>
+                <div>
+                  <dt class="font-label text-label-sm text-on-surface-variant dark:text-[#9A9693] mb-1">Timeline</dt>
+                  <dd class="text-on-surface dark:text-[#EDE9E0]">Sept – Dec 2025</dd>
+                </div>
+                <div>
+                  <dt class="font-label text-label-sm text-on-surface-variant dark:text-[#9A9693] mb-1">Role</dt>
+                  <dd class="text-on-surface dark:text-[#EDE9E0]">Class Project</dd>
+                </div>
+                <div>
+                  <dt class="font-label text-label-sm text-on-surface-variant dark:text-[#9A9693] mb-1">Course</dt>
+                  <dd class="text-on-surface dark:text-[#EDE9E0]">Deep Learning, BYU</dd>
+                </div>
+                <div>
+                  <dt class="font-label text-label-sm text-on-surface-variant dark:text-[#9A9693] mb-1">Stack</dt>
+                  <dd class="flex flex-wrap gap-1.5 mt-1">
+                    <span class="tech-chip">Python</span>
+                    <span class="tech-chip">Deep Learning</span>
+                    <span class="tech-chip">Neural Networks</span>
+                    <span class="tech-chip">Image Classification</span>
+                  </dd>
+                </div>
+              </dl>
+            </div>
+          </aside>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════════════════
+         NAVIGATION FOOTER
+         ═══════════════════════════════════════════════════════════════════════ -->
+    <section class="max-w-7xl mx-auto px-8 py-24">
+      <div class="flex justify-between items-center">
+        <a href="/projects/linux-game-server.html" class="text-on-surface-variant dark:text-[#9A9693] hover:text-secondary dark:hover:text-[#00C47C] font-body flex items-center gap-2 transition-colors">
+          <span class="material-symbols-outlined">arrow_back</span>
+          Automated Linux Game Server
+        </a>
+        <a href="/projects/gravitas-merge.html" class="text-on-surface-variant dark:text-[#9A9693] hover:text-secondary dark:hover:text-[#00C47C] font-body flex items-center gap-2 transition-colors">
+          Gravitas Merge
+          <span class="material-symbols-outlined">arrow_forward</span>
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+  <div id="footer-placeholder"></div>
+
+  <script src="/assets/js/components.js"></script>
+  <script src="/assets/js/main.js"></script>
+</body>
+</html>
