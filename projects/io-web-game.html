@@ -35,7 +35,7 @@
           Back to Projects
         </a>
 
-        <span class="font-label text-sm text-secondary dark:text-[#00C47C] mb-4 block">Game Dev &bull; Personal &bull; In Progress</span>
+        <span class="font-label text-sm text-secondary dark:text-[#00C47C] mb-4 block">Game Dev &bull; Personal &bull; Archived</span>
 
         <h1 class="font-headline text-display-lg font-bold text-on-surface dark:text-[#EDE9E0] mb-8 max-w-4xl leading-tight">
           .IO-Style Web Game
@@ -51,14 +51,13 @@
         </div>
 
         <div class="flex flex-wrap gap-4">
-          <a
-            href="https://oci.shuldberg.dev"
-            target="_blank"
-            rel="noopener"
-            class="bg-primary dark:bg-[#6A7A94] text-on-primary px-6 py-3 rounded-md font-body font-medium hover:bg-primary-dim dark:hover:bg-[#8090AA] transition-colors"
-          >
-            Live Demo
-          </a>
+          <div class="flex items-start gap-3 max-w-2xl bg-surface-container-low dark:bg-[#1C1A24] border border-outline-variant/30 dark:border-[#2E2B38] rounded-md px-5 py-4">
+            <span class="material-symbols-outlined text-on-surface-variant dark:text-[#9A9693] text-base mt-0.5 flex-shrink-0">cloud_off</span>
+            <p class="font-body text-sm text-on-surface-variant dark:text-[#9A9693]">
+              <span class="text-on-surface dark:text-[#EDE9E0] font-medium">No longer live.</span>
+              The hosted demo has been taken down, so there is nothing to play right now. The write-up below remains as a record of the project.
+            </p>
+          </div>
           <!-- <a
             href="https://github.com/dshuld"
             target="_blank"
@@ -101,10 +100,10 @@
                   This is a personal project to build a browser-based multiplayer game in the style of .IO games: real-time, websocket-driven, and accessible from any device without installing anything. The twist: I chose to write the backend in Rust, a language I hadn't used seriously before, as a deliberate exercise in learning a new ecosystem under real constraints.
                 </p>
                 <p>
-                  The game is deployed on an Oracle OCI compute instance and served through Cloudflare for CDN asset caching, DDoS protection, and automatic SSL/TLS certificate management. A GitHub Actions pipeline handles the full CI/CD flow, building a Docker image on push and deploying it to the OCI instance automatically.
+                  The game was deployed on an Oracle OCI compute instance and served through Cloudflare for CDN asset caching, DDoS protection, and automatic SSL/TLS certificate management. A GitHub Actions pipeline handles the full CI/CD flow, building a Docker image on push and deploying it to the OCI instance automatically.
                 </p>
                 <p>
-                  The project is ongoing and actively being developed. It's been a practical way to get fluent with Rust's ownership model, async runtimes, and websocket handling while also building out real infrastructure from scratch.
+                  The hosted deployment has since been retired and the game is no longer playable online. It was a practical way to get fluent with Rust's ownership model, async runtimes, and websocket handling while also building out real infrastructure from scratch.
                 </p>
               </div>
             </div>
@@ -160,19 +159,19 @@
               <dl class="space-y-5 font-body text-sm">
                 <div>
                   <dt class="font-label text-label-sm text-on-surface-variant dark:text-[#9A9693] mb-1">Status</dt>
-                  <dd class="text-on-surface dark:text-[#EDE9E0]">In Progress</dd>
+                  <dd class="text-on-surface dark:text-[#EDE9E0]">Archived</dd>
                 </div>
                 <div>
                   <dt class="font-label text-label-sm text-on-surface-variant dark:text-[#9A9693] mb-1">Timeline</dt>
-                  <dd class="text-on-surface dark:text-[#EDE9E0]">Feb 2026 – Present</dd>
+                  <dd class="text-on-surface dark:text-[#EDE9E0]">Feb 2026 – Aug 2026</dd>
                 </div>
                 <div>
                   <dt class="font-label text-label-sm text-on-surface-variant dark:text-[#9A9693] mb-1">Role</dt>
                   <dd class="text-on-surface dark:text-[#EDE9E0]">Solo Project</dd>
                 </div>
                 <div>
-                  <dt class="font-label text-label-sm text-on-surface-variant dark:text-[#9A9693] mb-1">Live URL</dt>
-                  <dd><a href="https://oci.shuldberg.dev" target="_blank" rel="noopener" class="text-secondary dark:text-[#00C47C] hover:underline">oci.shuldberg.dev</a></dd>
+                  <dt class="font-label text-label-sm text-on-surface-variant dark:text-[#9A9693] mb-1">Availability</dt>
+                  <dd class="text-on-surface dark:text-[#EDE9E0]">No longer hosted</dd>
                 </div>
                 <div>
                   <dt class="font-label text-label-sm text-on-surface-variant dark:text-[#9A9693] mb-1">Stack</dt>
